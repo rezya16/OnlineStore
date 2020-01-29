@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "ostore\\": "vendor/ostore/core",
+      "app\\": "app"
+    }
+  },
+  "require": {
+    "gabordemooij/redbean": "dev-master"
+  }
+}
