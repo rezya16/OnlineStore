@@ -9,6 +9,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
     <?=$this->getMeta();?>
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="megamenu/css/ionicons.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="megamenu/css/style.css" rel="stylesheet" type="text/css" media="all" />
 
     <!--Custom-Theme-files-->
     <!--theme-style-->
@@ -18,9 +20,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <!--start-menu-->
-
-    <link href="/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <body>
@@ -72,7 +71,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="header">
             <div class="col-md-9 header-left">
-                <div class="top-nav">
+                <div class="menu-container">
+                    <div class="menu">
+                        <?php new \app\widgets\menu\Menu([
+                            'tpl' => WWW.'/menu/menu.php',
+                            'attrs' => [
+                                    'style' => 'color:red'
+                            ]
+                        ]); ?>
+                    </div>
+                </div>
+                <!--<div class="top-nav">
                     <ul class="memenu skyblue"><li class="active"><a href="index.html">Home</a></li>
                         <li class="grid"><a href="#">Men</a>
                             <div class="mepanel">
@@ -208,7 +217,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li class="grid"><a href="contact.html">Contact</a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
                 <div class="clearfix"> </div>
             </div>
             <div class="col-md-3 header-right">
@@ -319,6 +328,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 </script>
 <!--End-slider-script-->
+<script src="megamenu/js/megamenu.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
