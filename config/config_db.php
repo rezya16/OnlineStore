@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'dsn' => 'mysql:host=localhost;dbname=ostore;charset=utf8',
+  'dsn' => 'mysql:host=localhost;dbname=onlinestore;charset=utf8',
   'user' => 'root',
   'pass' => ''
 ];
