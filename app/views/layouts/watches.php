@@ -163,6 +163,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!--footer-end-->
+<?php $curr = \ostore\App::$app->getProperty('currency');?>
+<script>
+    var path = '<?= PATH; ?>',
+        course = <?=$curr['value'];?>,
+        sumbolLeft = '<?=$curr['symbol_left'];?>',
+        symbolRight = '<?=$curr['symbol_right'];?>';
+</script>
+
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/simpleCart.min.js"> </script>
 <!--dropdown-->
@@ -203,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     });
 </script>
-<script src="js/jquery.easydropdown.js"></script>
+<script src="/js/jquery.easydropdown.js"></script>
 <script type="text/javascript">
     $(function() {
 
@@ -227,7 +235,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 </script>
 
-<script src="/js/main.js"></script>
+<script src="../../../public/js/main.js"></script>
 
 <?php
 $logs = R::getDatabaseAdapter()
