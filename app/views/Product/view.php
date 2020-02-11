@@ -63,20 +63,22 @@
                                 <del id="old-price"><?=$curr['symbol_left'];?><?=$product->old_price * $curr['value'];?><?=$curr['symbol_right'];?></del>
                                 <?php endif; ?>
                             <p><?= $product->content ?></p>
-                            <div class="available">
-                                <ul>
-                                    <li>Color
-                                        <select>
-                                            <option>Выбрать цвет</option>
-                                            <?php foreach ($mods as $mod):?>
-                                            <option data-title="<?=$mod->title;?>"
-                                                    data-price="<?=$mod->price * $curr['value'];?>"
-                                                    value="<?=$mod->id;?>"><?=$mod->title;?></option>
-                                            <?php endforeach; ?>
-                                        </select></li>
-                                    <div class="clearfix"> </div>
-                                </ul>
-                            </div>
+                            <?php if ($mods): ?>
+                                <div class="available">
+                                    <ul>
+                                        <li>Color
+                                            <select>
+                                                <option>Выбрать цвет</option>
+                                                <?php foreach ($mods as $mod):?>
+                                                <option data-title="<?=$mod->title;?>"
+                                                        data-price="<?=$mod->price * $curr['value'];?>"
+                                                        value="<?=$mod->id;?>"><?=$mod->title;?></option>
+                                                <?php endforeach; ?>
+                                            </select></li>
+                                        <div class="clearfix"> </div>
+                                    </ul>
+                                </div>
+                            <?php endif;?>
                             <ul class="tag-men">
                                 <li><span>CATEGORY :</span>
                                     <span ><a href="/category/<?=$cats[$product->category_id]['alias']?>"><?=$cats[$product->category_id]['title']?></a></span></li>
